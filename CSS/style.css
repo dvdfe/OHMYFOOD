@@ -1,0 +1,659 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+.menu-title h2{
+    font-family: "Shrikhand", sans-serif;
+}
+
+p{
+    font-family: "roboto", sans-serif;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;  
+}
+
+ h2, h3 {
+     font-family: "roboto", sans-serif;
+     overflow: hidden;
+     white-space: nowrap;
+     text-overflow: ellipsis;
+ }
+
+ a{
+     font-family: "roboto", sans-serif;
+     text-decoration: none;
+     color: black ;
+ }
+main h2{
+    margin-left: 20px;
+}
+body{
+    margin:0px
+}
+
+.loader{
+    display: flex;
+    background-color: white;
+    opacity: 90%;
+    height: 100vh;
+    position:fixed;
+    inset:0px;
+    z-index: 1;
+    animation: 300ms disappear;
+    animation-fill-mode: forwards;
+    animation-delay: 3s;
+}
+
+.loader-block{
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 20%;
+    height: 50px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+@keyframes disappear{
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(0);
+    }
+}
+
+.circle-loader{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    animation: 1s linear infinite alternate loader-slide;
+}
+
+.b1{
+    background-color: #9356DC;
+    
+}
+
+.b2{
+    background-color: #FF79DA;
+    animation-delay: 500ms;
+}
+
+.b3{
+    background-color: #99E2D0;
+    animation-delay: 800ms;
+}
+
+@keyframes loader-slide{
+    from{
+        margin-bottom: 20px;
+    }
+    to{
+        margin-top: 20px;
+    }
+}
+
+/*header*/
+.main-header h1{
+    text-align: center;
+    font-family: "Shrikhand", sans-serif;
+    box-shadow: 0px 2px 5px #d3d3d3;
+    margin: 0px;
+    padding: 15px;
+    position: relative;
+}
+
+.searchbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background: #E8E6E6;
+}
+
+/*searchpart*/
+.searchpart{
+    text-align: center;
+    padding-left: 100px;
+    padding-right: 100px;
+    background: #f3F3F3;
+    padding-top: 40px;
+    padding-bottom: 60px;
+}
+
+.searchpart h2{
+    margin-top: 0px;
+}
+
+.searchpart p{
+    color: grey;
+}
+
+.searchpart button{
+    height: 45px;
+    width: 200px;
+    border-radius: 25px;
+    border: transparent;
+    color: white;
+    background-image: linear-gradient(#FF79DA, #9356DC 75%);
+    box-shadow: 0px 5px 5px #d3d3d3;
+    transition: 1s;
+}
+
+.searchpart button:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+    opacity: 85%;
+}
+
+/*funtionning-part*/
+.functionning-part h2{
+    padding-top: 40px ;
+}
+
+.nav-block{
+    justify-items: center;
+    margin-bottom: 60px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.nav-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #F3F3F3;
+    border-radius: 15px;
+    box-shadow: 0px 5px 5px #d3d3d3;
+    margin-bottom: 20px;
+    height: 65px;
+    position: relative;
+}
+
+@media (min-width:900px) {
+    .nav-block{
+        display: flex;
+        justify-content: space-around;
+        
+    }
+    .nav-block p{
+        display:flex;
+    }
+    
+    .nav-card{
+        width: 30%;
+    }
+    .nav-card .number{
+        text-align: center;
+    }
+  
+}
+
+.nav-card:hover{
+    background-color: #ffefff;
+    cursor: pointer;
+    
+}
+.nav-card:hover .fas{
+    color: #9356DC;
+    
+}
+
+
+.nav-card .number{
+    margin:5px;
+    border-radius: 50%;
+    background-color: #9356DC;
+    position: absolute;
+    text-align: center;
+    left: -18px;
+    padding: 4px;
+    height: 25px;
+    width: 25px;
+    color: white;
+}
+
+@media (min-width:900px) {
+    .nav-card .number{
+        padding-left: 7px;
+        padding-top: 3px;
+    }
+    
+}
+
+.nav-card .fas{
+    color: grey;
+    margin-right: 20px;
+    font-size: 20px;
+}
+
+
+.restaurants{
+    background: #f3F3F3;
+    padding-bottom: 50px;
+}
+
+.restaurants-card{
+    display: flex;
+    flex-direction: column;
+    background: white;
+    width: 80%;
+    height: 240px;
+    margin-bottom: 30px;
+    border-radius: 20px;
+    box-shadow: 0px 5px 5px #d3d3d3;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.restaurants-card:hover{
+    cursor: pointer;
+}
+
+@media (min-width:1000px) {
+    .restaurants-block{
+        display: flex;
+        gap: 40px;
+        margin: 0px 20px 0px 20px;
+    }
+    
+}
+.restaurants-card img{
+    height: 70%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 20px 20px 0px 0px;
+    
+}
+
+.restaurants h2{
+    padding-top: 60px;
+}
+
+.restaurants-card h3{
+    margin: 0px;
+    padding: 15px 15px 0px 15px;
+}
+
+.restaurants-card p{
+    margin: 0px;
+    padding: 0px 15px 15px 15px;
+
+}
+
+.restaurants-card .all-description{
+    display: flex;
+    justify-content: space-between;
+}
+
+.restaurants-card i{
+    font-size: 31px;
+    margin-right: 25px;
+    align-self: center;
+    margin-top: 20px;
+}
+
+.restaurants-card .new{
+    background: #99E2D0;
+    position: absolute;
+    right: 25px;
+    top: 15px;
+    padding: 10px;
+    
+}
+
+.all-description .fas.fa-heart{
+     background: -webkit-linear-gradient(#FF79DA, #9356DC 75%);
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+     visibility: hidden;
+     position: absolute;
+     font-size: 27px;
+     right: 3px;
+     bottom: 24px;
+ 
+}
+
+.heart-effect:hover .fas{
+    visibility: visible;
+    cursor: pointer;
+}
+
+footer{
+    background: #333333;
+    color: white;
+    padding-bottom: 40px;
+}
+footer .footer-title{
+    font-size: 20px;
+    padding-top: 20px;
+    padding-left: 10px;
+    margin-bottom: 20px;
+    color: white;
+    font-family: "Shrikhand", sans-serif;;
+   
+}
+.inline-text-footer{
+    display: flex;
+    align-items: center;
+}
+
+footer p{
+    margin: 5px;
+    padding-left: 5px;
+}
+
+.inline-text-footer i{
+    padding-right: 10px;
+    margin-left: 8px;
+}
+
+@media (min-width:1000px) {
+    .footer p{
+        display:flex;
+        flex-direction: row;
+    }
+
+    .inline-text-footer{
+        display: flex;
+        flex-direction: row;
+    }
+    
+}
+/*Pages*/
+
+.arrow{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 28px;
+    left: 35px;
+    font-size: 23px;
+}
+
+.header-menu{
+    display: flex;
+}
+
+.header-menu h1{
+    justify-content: center;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    text-align: center;
+    font-family: "Shrikhand", sans-serif;
+    padding: 15px;
+    position: relative;
+
+}
+
+.banner{
+    height: 300px;
+}
+
+.banner img{
+    height: 300px;
+    width: 100%;
+    position: absolute;
+    object-fit: cover;
+    object-position: center;
+}
+
+.block-column{
+    overflow: hidden;
+    width: 0%;
+    transition-delay: 2s;
+    width: 100%;
+}
+
+.menu{
+    background: #f3F3F3;
+    border-radius: 50px 50px 0px 0px;
+    position: relative;
+    margin-top: -60px;
+    padding-bottom: 10px;
+}
+.menu p, h3{
+    margin-left: 20px;
+}
+
+.menu-title{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: -25px;
+}
+
+.menu-title h2:hover{
+    cursor: pointer;
+}
+
+.menu-title h2{
+    margin-left: 20px;
+    margin-top: 40px;
+}
+
+.menu-title i{
+    margin-right: 30px;
+    font-size: 29px;
+    margin-top: 20px;
+}
+
+.menu-title .fas.fa-heart {
+    font-size: 25px;
+     background: -webkit-linear-gradient(#FF79DA, #9356DC 75%);
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+     visibility: hidden;
+     transition: 300ms;
+     position: absolute;
+     right: 2px;
+     top: 24px;
+}
+
+.heart-effect:hover .fas{
+    visibility: visible;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.menu .card-block{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    width: 95%;
+}
+.menu .title-block{
+    margin-top: 40px;
+    text-decoration: underline #99E2D0;
+    text-decoration-thickness:4px;
+}
+.menu .all-description{
+    display: flex;
+    justify-content: space-between;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0px 5px 5px #d3d3d3;
+    margin-bottom: 15px;
+    animation-duration: 2.4s;
+    animation-name: slide;
+    animation-fill-mode: forwards;
+    opacity: 0;
+
+}
+
+.all-description:hover{
+    cursor: pointer;
+}
+
+.menu .all-description p{
+    margin-top: 0px;
+}
+
+.menu .all-description h3{
+    margin-bottom: 0px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.price-part{
+    display: flex;
+    margin-left: auto;
+}
+.menu .all-description .price{
+    margin-right: 20px;
+    align-self: end;
+}
+
+.check{
+    background-color: #99E2D0;
+    border-radius: 0px 15px 15px 0px;
+    width: 0%;
+    transition: 1s;
+}
+
+.all-description:hover .check{
+    width: 13vw;
+}
+.description{
+    
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+      
+}
+
+.check i{
+    padding: 5px;
+    background-color: white;
+    border-radius: 50%;
+    color: #99E2D0;
+    margin: 25px;
+    padding: 4px;
+    display: flex;
+    width: 24px;
+    height: 24px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+    visibility: hidden;
+    transition: 300ms;
+
+}
+
+.all-description:hover .check i{
+    visibility: visible;
+    transition-delay: 200ms;
+    transform:rotate(360deg)
+
+}
+
+
+.check:hover .all-description{
+    margin-right: 0px;
+    visibility: visible;
+    border: red solid
+}
+
+@media (min-width:1200px) {
+    .block-disposition{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+}
+
+.menu-button{
+    
+    height: 45px;
+    width: 200px;
+    border-radius: 25px;
+    border: transparent;
+    color: white;
+    background-image: linear-gradient(#FF79DA, #9356DC 75%);
+    box-shadow: 0px 5px 5px #d3d3d3;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    transition:1s;
+}
+
+.menu-button:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+    opacity: 85%;
+}
+
+.block-column{
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    flex-grow: 1;  
+
+}
+
+.a1{
+    animation-delay: 0s;
+}
+
+.a2{
+    animation-delay: 0.3s;
+}
+
+.a3{
+    animation-delay: 0.6s;
+}
+
+.a4{
+    animation-delay: 0.9s;
+}
+
+.a5{
+    animation-delay: 1.2s;
+}
+
+.a6{
+    animation-delay: 1.5s;
+}
+
+.a7{
+    animation-delay: 1.8s;
+}
+
+.a8{
+    animation-delay: 2.1s;
+}
+
+.a9{
+    animation-delay: 2.4s;
+}
+@keyframes slide{
+    from{
+        opacity: 0;
+        margin-bottom: 25px;
+    }
+    to{
+        opacity: 1;
+        margin-bottom: 15px;
+    }
+}
