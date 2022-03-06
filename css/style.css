@@ -11,17 +11,19 @@
 
 p{
     font-family: "roboto", sans-serif;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;  
+    overflow: hidden;  
 }
 
  h2, h3 {
      font-family: "roboto", sans-serif;
      overflow: hidden;
-     white-space: nowrap;
-     text-overflow: ellipsis;
+     
  }
+
+ .all-description h2, .all-description h3{
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
 
  a{
      font-family: "roboto", sans-serif;
@@ -298,7 +300,7 @@ body{
 }
 
 .restaurants-card i{
-    font-size: 31px;
+    font-size: 25px;
     margin-right: 25px;
     align-self: center;
     margin-top: 20px;
@@ -320,8 +322,8 @@ body{
      visibility: hidden;
      position: absolute;
      font-size: 27px;
-     right: 3px;
-     bottom: 24px;
+     right: 0px;
+     bottom: 27px;
  
 }
 
@@ -448,7 +450,7 @@ footer p{
 
 .menu-title i{
     margin-right: 30px;
-    font-size: 29px;
+    font-size: 25px;
     margin-top: 20px;
 }
 
@@ -460,7 +462,7 @@ footer p{
      visibility: hidden;
      transition: 300ms;
      position: absolute;
-     right: 2px;
+     right: 0px;
      top: 24px;
 }
 
